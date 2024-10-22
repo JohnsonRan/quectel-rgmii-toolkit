@@ -3,7 +3,7 @@
 # Configuration and directories
 CONFIG_FILE="/usrdata/simpleupdates/simpleupdate.conf"
 GITUSER="JohnsonRan"
-GITTREE="main"
+GITTREE="development"
 DIRECTORIES=("simpleadmin" "socat-at-bridge" "simplefirewall" "tailscale" "ttyd")
 BASE_URL="https://ghp.ci/raw.githubusercontent.com/$GITUSER/quectel-rgmii-toolkit/$GITTREE"
 LOG_FILE="/tmp/simpleupdate.log"
