@@ -3,7 +3,7 @@
 #WORK IN PROGRESS
 
 # Define toolkit paths
-GITUSER="iamromulan"
+GITUSER="JohnsonRan"
 GITREPO="quectel-rgmii-toolkit"
 GITTREE="development-SDXPINN"
 GITMAINTREE="SDXPINN"
@@ -225,8 +225,8 @@ while true; do
 
     case $choice in
         1) send_at_commands_using_atcmd ;;
-        2)  cd /tmp && wget -O rcPCIe_SDXPINN_toolkit.sh https://raw.githubusercontent.com/iamromulan/quectel-rgmii-toolkit/SDXPINN/rcPCIe_SDXPINN_toolkit.sh && chmod +x rcPCIe_SDXPINN_toolkit.sh && ./rcPCIe_SDXPINN_toolkit.sh && cd / ;;
-        3)  cd /tmp && wget -O rcPCIe_SDXPINN_toolkit.sh https://raw.githubusercontent.com/iamromulan/quectel-rgmii-toolkit/development-SDXPINN/rcPCIe_SDXPINN_toolkit.sh && chmod +x rcPCIe_SDXPINN_toolkit.sh && ./rcPCIe_SDXPINN_toolkit.sh && cd / ;;
+        2)  cd /tmp && wget -O rcPCIe_SDXPINN_toolkit.sh https://ghp.ci/raw.githubusercontent.com/JohnsonRan/quectel-rgmii-toolkit/SDXPINN/rcPCIe_SDXPINN_toolkit.sh && chmod +x rcPCIe_SDXPINN_toolkit.sh && ./rcPCIe_SDXPINN_toolkit.sh && cd / ;;
+        3)  cd /tmp && wget -O rcPCIe_SDXPINN_toolkit.sh https://ghp.ci/raw.githubusercontent.com/JohnsonRan/quectel-rgmii-toolkit/development-SDXPINN/rcPCIe_SDXPINN_toolkit.sh && chmod +x rcPCIe_SDXPINN_toolkit.sh && ./rcPCIe_SDXPINN_toolkit.sh && cd / ;;
         4) ttl_setup ;;       
         5) set_root_passwd ;;
         6) configure_tailscale ;;

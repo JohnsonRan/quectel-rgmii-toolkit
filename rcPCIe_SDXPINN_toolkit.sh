@@ -3,7 +3,7 @@
 #WORK IN PROGRESS
 
 # Define toolkit paths
-GITUSER="iamromulan"
+GITUSER="JohnsonRan"
 GITREPO="quectel-rgmii-toolkit"
 GITTREE="development-SDXPINN"
 GITMAINTREE="SDXPINN"
@@ -73,14 +73,14 @@ install_mount_fix() {
     fi
     # Install mount-fix
     cd /tmp
-    curl -O https://raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/sdxpinn-mount-fix_1.1.0_aarch64_cortex-a53.ipk
+    curl -O https://ghp.ci/raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/sdxpinn-mount-fix_1.1.0_aarch64_cortex-a53.ipk
     opkg install sdxpinn-mount-fix_1.1.0_aarch64_cortex-a53.ipk
 }
 
 basic_55x_setup() {    
-	echo "src/gz iamromulan-SDXPINN-repo https://raw.githubusercontent.com/iamromulan/quectel-rgmii-toolkit/SDXPINN/opkg-feed" >> /etc/opkg/customfeeds.conf
+	echo "src/gz iamromulan-SDXPINN-repo https://ghp.ci/raw.githubusercontent.com/JohnsonRan/quectel-rgmii-toolkit/SDXPINN/opkg-feed" >> /etc/opkg/customfeeds.conf
 	cd /tmp
-	curl -O https://raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/iamromulan-SDXPINN-repo.key
+	curl -O https://ghp.ci/raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/iamromulan-SDXPINN-repo.key
  	opkg-key add /tmp/iamromulan-SDXPINN-repo.key
 	opkg update
     	echo -e "\e[92m"
@@ -203,8 +203,8 @@ tailscale_menu() {
 install_update_tailscale() {
     echo -e "\e[1;31mInstalling Tailscale 1.74.1...\e[0m"
     cd /tmp
-    curl -O https://raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/tailscaled_1.74.1-1_aarch64_cortex-a53.ipk
-    curl -O https://raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/tailscale_1.74.1-1_aarch64_cortex-a53.ipk
+    curl -O https://ghp.ci/raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/tailscaled_1.74.1-1_aarch64_cortex-a53.ipk
+    curl -O https://ghp.ci/raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/tailscale_1.74.1-1_aarch64_cortex-a53.ipk
     opkg install tailscaled_1.74.1-1_aarch64_cortex-a53.ipk
     opkg install tailscale_1.74.1-1_aarch64_cortex-a53.ipk
     
@@ -344,7 +344,7 @@ while true; do
             if [ $? -eq 1 ]; then continue; fi
             echo -e "\e[1;32mInstalling Speedtest.net CLI (speedtest command)\e[0m"
             cd /tmp
-            curl -O https://raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/ookla-speedtest_1.2.0_aarch64_cortex-a53.ipk
+            curl -O https://ghp.ci/raw.githubusercontent.com/$GITUSER/$GITREPO/$GITTREE/opkg-feed/ookla-speedtest_1.2.0_aarch64_cortex-a53.ipk
             opkg install ookla-speedtest_1.2.0_aarch64_cortex-a53.ipk            
             echo -e "\e[1;32mSpeedtest CLI (speedtest command) installed!!\e[0m"
             echo -e "\e[1;32mTry running the command 'speedtest'\e[0m"
